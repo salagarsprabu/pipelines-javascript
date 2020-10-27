@@ -19,7 +19,7 @@ steps:
     npm pack
   displayName: 'Package for npm release'
   
-- script: npm test
+- script: mocha test --reporter mocha-junit-reporter
   displayName: 'npm test'
 
 - task: CopyFiles@2
