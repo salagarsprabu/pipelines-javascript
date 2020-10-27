@@ -19,8 +19,11 @@ steps:
     npm pack
   displayName: 'Package for npm release'
   
-- script: mocha test --reporter mocha-junit-reporter
-  displayName: 'npm test'
+- task: PublishCodeCoverageResults@1
+  inputs: 
+    codeCoverageTool: Cobertura # or JaCoCo
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 - task: CopyFiles@2
   inputs:
