@@ -1,5 +1,5 @@
 trigger:
-- '*' ## denotes any branch demo
+- '*' ## denotes any branch demo1
 
 pool:
   vmImage: 'ubuntu-latest'
