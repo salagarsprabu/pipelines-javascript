@@ -1,9 +1,11 @@
 trigger:
 - '*' ## denotes any branch demo1
 
+--  pool:
+--  vmImage: 'ubuntu-latest'
+## change to self hosted agent
 pool:
-  vmImage: 'ubuntu-latest'
-
+   name: 'MyAgentPool'
 steps:
 - task: NodeTool@0
   inputs:
