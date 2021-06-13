@@ -1,8 +1,8 @@
 trigger:
 - '*' ## denotes any branch demo1
 
---  pool:
---  vmImage: 'ubuntu-latest'
+## --  pool:
+## --  vmImage: 'ubuntu-latest'
 ## change to self hosted agent
 pool:
    name: 'MyAgentPool'
